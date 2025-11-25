@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>CosmicFocus — Basic Frontend</title>
+    <meta name="description" content="A minimal responsive starter for a frontend project." />
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <header role="banner" aria-label="Site header">
+        <a class="brand" href="#" aria-label="CosmicFocus home">
+            <div class="logo" aria-hidden="true">CF</div>
+            <div>
+                <div style="font-weight:600">CosmicFocus</div>
+                <div style="font-size:12px;color:var(--muted);margin-top:2px">Minimal frontend starter</div>
+            </div>
+        </a>
+
+        <nav role="navigation" aria-label="Main navigation">
+            <a class="button desktop-only" href="#features">Features</a>
+            <a class="button desktop-only" href="#contact">Contact</a>
+            <a class="button primary" href="#get-started">Get started</a>
+        </nav>
+    </header>
+
+    <main role="main">
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="hero-top">
+                <div>
+                    <h1 id="hero-title">Build faster with a simple, accessible starter</h1>
+                    <p class="muted">A compact, responsive layout with utility styles to get your frontend project off the ground quickly.</p>
+                </div>
+                <div style="display:flex;gap:8px;align-items:center">
+                    <a class="button" href="#docs">Docs</a>
+                    <a class="button primary" id="get-started" href="#contact">Start</a>
+                </div>
+            </div>
+
+            <div class="grid" style="margin-top:6px">
+                <div class="card">
+                    <h3>Responsive</h3>
+                    <p class="muted">Layouts adapt to any screen with simple CSS grid and flex utilities.</p>
+                </div>
+                <div class="card">
+                    <h3>Accessible</h3>
+                    <p class="muted">Semantic markup and ARIA support to improve usability for everyone.</p>
+                </div>
+                <div class="card">
+                    <h3>Customizable</h3>
+                    <p class="muted">Adjust colors, spacing, and typography via CSS variables.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" aria-labelledby="features-title">
+            <div style="display:flex;gap:18px;align-items:flex-start;margin-top:14px;flex-wrap:wrap">
+                <div style="flex:1;min-width:260px" class="card">
+                    <h3 id="features-title">Starter features</h3>
+                    <ul class="muted" style="margin:8px 0 0 18px">
+                        <li>Ready-to-use layout and components</li>
+                        <li>Dark-first color scheme</li>
+                        <li>Small footprint, no frameworks required</li>
+                    </ul>
+                </div>
+
+                <form id="contact" class="card" style="min-width:300px" aria-labelledby="contact-title">
+                    <h3 id="contact-title">Contact / Try it</h3>
+                    <label style="display:block;margin-top:8px">
+                        <span class="muted">Name</span>
+                        <input name="name" type="text" placeholder="Your name" style="width:100%;margin-top:6px;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit" required>
+                    </label>
+                    <label style="display:block;margin-top:10px">
+                        <span class="muted">Email</span>
+                        <input name="email" type="email" placeholder="you@example.com" style="width:100%;margin-top:6px;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit" required>
+                    </label>
+                    <label style="display:block;margin-top:10px">
+                        <span class="muted">Message</span>
+                        <textarea name="message" rows="3" placeholder="Tell us what you need" style="width:100%;margin-top:6px;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit"></textarea>
+                    </label>
+                    <div style="display:flex;gap:8px;justify-content:flex-end;margin-top:12px">
+                        <button type="reset" class="button" style="border:none;cursor:pointer">Reset</button>
+                        <button type="submit" class="button primary" style="border:none;cursor:pointer">Send</button>
+                    </div>
+                    <p id="form-msg" class="muted" style="margin-top:10px;display:none"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer role="contentinfo">
+        <div>© <span id="year"></span> CosmicFocus — Built with a tiny starter template</div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
